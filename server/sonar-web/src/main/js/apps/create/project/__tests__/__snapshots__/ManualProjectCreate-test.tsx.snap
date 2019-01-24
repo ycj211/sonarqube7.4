@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+  >
+    <withRouter(OrganizationInput)
+      onChange={[Function]}
+      organization=""
+      organizations={
+        Array [
+          Object {
+            "key": "foo",
+            "name": "Foo",
+          },
+          Object {
+            "key": "bar",
+            "name": "Bar",
+          },
+        ]
+      }
+    />
+    <ProjectKeyInput
+      className="form-field"
+      onChange={[Function]}
+    />
+    <ProjectNameInput
+      className="form-field"
+      onChange={[Function]}
+    />
+    <SubmitButton
+      disabled={true}
+    >
+      setup
+    </SubmitButton>
+    <DeferredSpinner
+      className="spacer-left"
+      loading={false}
+      timeout={100}
+    />
+  </form>
+</Fragment>
+`;

@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display the bounded organizations dropdown with the list of repositories 1`] = `
+<Fragment>
+  <withRouter(OrganizationInput)
+    autoImport={true}
+    onChange={[Function]}
+    organization="foo"
+    organizations={
+      Array [
+        Object {
+          "alm": Object {
+            "key": "github",
+            "url": "",
+          },
+          "key": "foo",
+          "name": "Foo",
+        },
+        Object {
+          "alm": Object {
+            "key": "github",
+            "url": "",
+          },
+          "key": "bar",
+          "name": "Bar",
+        },
+      ]
+    }
+  />
+  <RemoteRepositories
+    almApplication={
+      Object {
+        "backgroundColor": "blue",
+        "iconPath": "icon/path",
+        "installationUrl": "https://alm.installation.url",
+        "key": "github",
+        "name": "GitHub",
+      }
+    }
+    onProjectCreate={[MockFunction]}
+    organization="foo"
+  />
+</Fragment>
+`;
+
+exports[`should display the provider app install button 1`] = `
+<Fragment>
+  <p
+    className="spacer-bottom"
+  >
+    onboarding.create_project.install_app_description.github
+  </p>
+  <IdentityProviderLink
+    className="display-inline-block"
+    identityProvider={
+      Object {
+        "backgroundColor": "blue",
+        "iconPath": "icon/path",
+        "installationUrl": "https://alm.installation.url",
+        "key": "github",
+        "name": "GitHub",
+      }
+    }
+    onClick={[Function]}
+    small={true}
+    url="https://alm.installation.url"
+  >
+    onboarding.import_organization.choose_organization_button.github
+  </IdentityProviderLink>
+</Fragment>
+`;

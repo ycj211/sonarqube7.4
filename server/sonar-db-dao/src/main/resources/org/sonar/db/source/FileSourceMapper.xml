@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="org.sonar.db.source.FileSourceMapper">
+
+  <select id="select" parameterType="map" resultType="org.sonar.db.source.FileSourceDto">
+    select
+      id,
+      project_uuid as projectUuid,
+      file_uuid as fileUuid,
+      created_at as createdAt,
+      updated_at as updatedAt,
+      binary_data as binaryData,
+      line_hashes as rawLineHashes,
+      line_hashes_version as lineHashesVersion,
+      line_count as lineCount,
+      data_hash as dataHash,
+      src_hash as srcHash,
+      data_type as
+      dataType,
+      revision
+    from
+      file_sources
+    where
+      file_uuid = #{fileUuid,jdbcType=VARCHAR}
+      and data_type = #{dataType,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectHashesForProject" parameterType="map" resultType="org.sonar.db.source.FileSourceDto">
+    select
+      id,
+      file_uuid as fileUuid,
+      data_hash as dataHash,
+      src_hash as srcHash,
+      revision,
+      updated_at as updatedAt
+    from
+      file_sources
+    where
+      project_uuid = #{projectUuid,jdbcType=VARCHAR}
+      and data_type = #{dataType,jdbcType=VARCHAR}
+  </select>
+
+  <select id="scrollLineHashes" parameterType="map" resultType="org.sonar.db.source.LineHashesWithKeyDto" fetchSize="${_scrollFetchSize}" resultSetType="FORWARD_ONLY">
+    select
+      p.kee as kee,
+      p.path as path,
+      fs.line_hashes as rawLineHashes
+    from projects p
+    inner join file_sources fs on
+      fs.file_uuid = p.uuid
+      and fs.data_type = 'SOURCE'
+    where
+      p.kee in
+      <foreach collection="fileKeys" item="fileKey" open="(" close=")" separator=",">
+        #{fileKey,jdbcType=VARCHAR}
+      </foreach>
+      and p.path is not null
+  </select>
+
+  <select id="selectLineHashesVersion" parameterType="map" resultType="Integer">
+    SELECT
+      line_hashes_version
+    FROM
+      file_sources
+    WHERE
+      file_uuid = #{fileUuid,jdbcType=VARCHAR}
+      and data_type=#{dataType,jdbcType=VARCHAR}
+  </select>
+
+  <insert id="insert" parameterType="org.sonar.db.source.FileSourceDto" useGeneratedKeys="false">
+    insert into file_sources
+    (
+      project_uuid,
+      file_uuid,
+      created_at,
+      updated_at,
+      binary_data,
+      line_hashes,
+      line_hashes_version,
+      line_count,
+      data_hash,
+      src_hash,
+      data_type,
+      revision
+    )
+    values
+    (
+      #{projectUuid,jdbcType=VARCHAR},
+      #{fileUuid,jdbcType=VARCHAR},
+      #{createdAt,jdbcType=BIGINT},
+      #{updatedAt,jdbcType=BIGINT},
+      #{binaryData,jdbcType=BLOB},
+      #{rawLineHashes,jdbcType=CLOB},
+      #{lineHashesVersion,jdbcType=INTEGER},
+      #{lineCount,jdbcType=INTEGER},
+      #{dataHash,jdbcType=VARCHAR},
+      #{srcHash,jdbcType=VARCHAR},
+      #{dataType,jdbcType=VARCHAR},
+      #{revision,jdbcType=VARCHAR}
+    )
+  </insert>
+
+  <update id="update" parameterType="org.sonar.db.source.FileSourceDto" useGeneratedKeys="false">
+    update
+      file_sources
+    set
+      updated_at = #{updatedAt,jdbcType=BIGINT},
+      binary_data = #{binaryData,jdbcType=BLOB},
+      line_hashes = #{rawLineHashes,jdbcType=CLOB},
+      line_hashes_version = #{lineHashesVersion,jdbcType=INTEGER},
+      line_count = #{lineCount,jdbcType=INTEGER},
+      data_hash = #{dataHash,jdbcType=VARCHAR},
+      src_hash = #{srcHash,jdbcType=VARCHAR},
+      revision = #{revision,jdbcType=VARCHAR}
+    where
+      id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>
+

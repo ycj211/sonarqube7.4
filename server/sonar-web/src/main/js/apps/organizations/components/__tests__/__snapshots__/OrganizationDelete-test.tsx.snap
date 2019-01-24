@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should show a info message for paying organization 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="organization.delete"
+  />
+  <div
+    className="page page-limited"
+  >
+    <header
+      className="page-header"
+    >
+      <h1
+        className="page-title"
+      >
+        organization.delete
+      </h1>
+      <div
+        className="page-description"
+      >
+        <InstanceMessage
+          message="organization.delete.description"
+        />
+      </div>
+    </header>
+    <ConfirmButton
+      confirmButtonText="delete"
+      isDestructive={true}
+      modalBody={
+        <div>
+          <Alert
+            variant="warning"
+          >
+            organization.delete.sonarcloud.paid_plan_info
+          </Alert>
+          <p>
+            organization.delete.question
+          </p>
+        </div>
+      }
+      modalHeader="organization.delete"
+      onConfirm={[Function]}
+    >
+      <Component />
+    </ConfirmButton>
+  </div>
+</Fragment>
+`;
+
+exports[`smoke test 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="organization.delete"
+  />
+  <div
+    className="page page-limited"
+  >
+    <header
+      className="page-header"
+    >
+      <h1
+        className="page-title"
+      >
+        organization.delete
+      </h1>
+      <div
+        className="page-description"
+      >
+        <InstanceMessage
+          message="organization.delete.description"
+        />
+      </div>
+    </header>
+    <ConfirmButton
+      confirmButtonText="delete"
+      isDestructive={true}
+      modalBody={
+        <div>
+          <p>
+            organization.delete.question
+          </p>
+        </div>
+      }
+      modalHeader="organization.delete"
+      onConfirm={[Function]}
+    >
+      <Component />
+    </ConfirmButton>
+  </div>
+</Fragment>
+`;

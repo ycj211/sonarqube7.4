@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`does not render warning 1`] = `
+<div
+  className="page page-limited"
+>
+  <div>
+    <h4>
+      key
+    </h4>
+    <code>
+      abcd
+    </code>
+  </div>
+</div>
+`;
+
+exports[`renders 1`] = `
+<div
+  className="page page-limited"
+>
+  <div
+    className="big-spacer-bottom"
+  >
+    <Alert
+      variant="warning"
+    >
+      provisioning.no_analysis
+    </Alert>
+    <div
+      className="big-spacer-top"
+    >
+      <FormattedMessage
+        defaultMessage="provisioning.no_analysis.delete"
+        id="provisioning.no_analysis.delete"
+        values={
+          Object {
+            "link": <Link
+              className="text-danger"
+              onlyActiveOnIndex={false}
+              style={Object {}}
+              to={
+                Object {
+                  "pathname": "/project/deletion",
+                  "query": Object {
+                    "id": "abcd",
+                  },
+                }
+              }
+            >
+              provisioning.no_analysis.delete_project
+            </Link>,
+          }
+        }
+      />
+    </div>
+  </div>
+  <div>
+    <h4>
+      key
+    </h4>
+    <code>
+      abcd
+    </code>
+  </div>
+</div>
+`;
+
+exports[`should render another message when there are branches 1`] = `
+<div
+  className="page page-limited"
+>
+  <div
+    className="big-spacer-bottom"
+  >
+    <Alert
+      variant="warning"
+    >
+      <FormattedMessage
+        defaultMessage="provisioning.no_analysis_on_main_branch"
+        id="provisioning.no_analysis_on_main_branch"
+        values={
+          Object {
+            "branchName": "b",
+            "branchType": <div
+              className="outline-badge text-baseline"
+            >
+              branches.main_branch
+            </div>,
+          }
+        }
+      />
+    </Alert>
+  </div>
+  <div>
+    <h4>
+      key
+    </h4>
+    <code>
+      abcd
+    </code>
+  </div>
+</div>
+`;
+
+exports[`should render another message when there are branches 2`] = `
+<div
+  className="page page-limited"
+>
+  <div
+    className="big-spacer-bottom"
+  >
+    <Alert
+      variant="warning"
+    >
+      <FormattedMessage
+        defaultMessage="provisioning.no_analysis_on_main_branch.bad_configuration"
+        id="provisioning.no_analysis_on_main_branch.bad_configuration"
+        values={
+          Object {
+            "branchName": "b",
+            "branchType": <div
+              className="outline-badge text-baseline"
+            >
+              branches.main_branch
+            </div>,
+          }
+        }
+      />
+    </Alert>
+  </div>
+  <div>
+    <h4>
+      key
+    </h4>
+    <code>
+      abcd
+    </code>
+  </div>
+</div>
+`;

@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should cut sonarqube/sonarcloud/static content 1`] = `
+<div
+  className="markdown"
+>
+  <Block
+    key="h-1"
+  >
+    <p
+      key="h-2"
+    >
+      some
+    </p>
+    
+
+    <p
+      key="h-3"
+    >
+      sonarqube
+    </p>
+    
+
+    <p
+      key="h-4"
+    >
+        long
+    </p>
+    
+
+    <p
+      key="h-5"
+    >
+        multiline
+    </p>
+    
+
+    <p
+      key="h-6"
+    >
+      text
+    </p>
+  </Block>
+</div>
+`;
+
+exports[`should cut sonarqube/sonarcloud/static content 2`] = `
+<div
+  className="markdown"
+>
+  <Block
+    key="h-1"
+  >
+    <p
+      key="h-2"
+    >
+      some
+    </p>
+    
+
+    <p
+      key="h-3"
+    >
+      sonarcloud
+    </p>
+    
+
+    <p
+      key="h-4"
+    >
+      text
+    </p>
+  </Block>
+</div>
+`;
+
+exports[`should render simple markdown 1`] = `
+<div
+  className="markdown"
+>
+  <Block
+    key="h-1"
+  >
+    <p
+      key="h-2"
+    >
+      this is 
+      <em
+        key="h-3"
+      >
+        bold
+      </em>
+       text
+    </p>
+  </Block>
+</div>
+`;
+
+exports[`should render with custom props for links 1`] = `
+<withChildProps
+  href="#quality-profiles"
+  key="h-3"
+>
+  link
+</withChildProps>
+`;
+
+exports[`should use custom component for links 1`] = `
+<withChildProps
+  href="/quality-profiles"
+  key="h-3"
+>
+  link
+</withChildProps>
+`;

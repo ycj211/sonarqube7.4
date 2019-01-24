@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<Fragment>
+  <Checkbox
+    checked={false}
+    onCheck={[Function]}
+    thirdState={false}
+  >
+    <img
+      alt="Foo Provider"
+      className="spacer-left"
+      height={14}
+      src="/images/sonarcloud/foo.svg"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      width={14}
+    />
+    <span
+      className="spacer-left"
+    >
+      Awesome Project
+    </span>
+  </Checkbox>
+</Fragment>
+`;
+
+exports[`should render disabled 1`] = `
+<Fragment>
+  <Checkbox
+    checked={true}
+    disabled={true}
+    onCheck={[Function]}
+    thirdState={false}
+  >
+    <img
+      alt="Foo Provider"
+      className="spacer-left"
+      height={14}
+      src="/images/sonarcloud/foo.svg"
+      style={
+        Object {
+          "opacity": 0.5,
+        }
+      }
+      width={14}
+    />
+    <span
+      className="spacer-left"
+    >
+      Cool Project
+    </span>
+  </Checkbox>
+  <span
+    className="big-spacer-left"
+  >
+    <CheckIcon
+      className="little-spacer-right"
+      fill="#00aa00"
+    />
+    <FormattedMessage
+      defaultMessage="onboarding.create_project.repository_imported"
+      id="onboarding.create_project.repository_imported"
+      values={
+        Object {
+          "link": <Link
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to={
+              Object {
+                "pathname": "/dashboard",
+                "query": Object {
+                  "branch": undefined,
+                  "id": "proj_cool",
+                },
+              }
+            }
+          >
+            onboarding.create_project.see_project
+          </Link>,
+        }
+      }
+    />
+  </span>
+</Fragment>
+`;
+
+exports[`should render private repositories 1`] = `
+<Fragment>
+  <Checkbox
+    checked={false}
+    disabled={true}
+    onCheck={[Function]}
+    thirdState={false}
+  >
+    <img
+      alt="Foo Provider"
+      className="spacer-left"
+      height={14}
+      src="/images/sonarcloud/foo.svg"
+      style={
+        Object {
+          "opacity": 0.5,
+        }
+      }
+      width={14}
+    />
+    <span
+      className="spacer-left"
+    >
+      Awesome Project
+    </span>
+  </Checkbox>
+  <Tooltip
+    overlay="onboarding.import_organization.private.disabled"
+  >
+    <div
+      className="outline-badge spacer-left"
+    >
+      visibility.private
+    </div>
+  </Tooltip>
+</Fragment>
+`;
+
+exports[`should render selected 1`] = `
+<Fragment>
+  <Checkbox
+    checked={true}
+    onCheck={[Function]}
+    thirdState={false}
+  >
+    <img
+      alt="Foo Provider"
+      className="spacer-left"
+      height={14}
+      src="/images/sonarcloud/foo.svg"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      width={14}
+    />
+    <span
+      className="spacer-left"
+    >
+      Awesome Project
+    </span>
+  </Checkbox>
+</Fragment>
+`;

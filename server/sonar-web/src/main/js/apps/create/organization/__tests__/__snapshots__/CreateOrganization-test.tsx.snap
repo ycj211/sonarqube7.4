@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with auto personal organization bind page 1`] = `
+<AlmApplicationInstalling
+  almKey="github"
+/>
+`;
+
+exports[`should render with auto personal organization bind page 2`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="onboarding.import_organization.personal.page.header"
+    titleTemplate="%s"
+  />
+  <div
+    className="sonarcloud page page-limited"
+  >
+    <header
+      className="page-header"
+    >
+      <h1
+        className="page-title big-spacer-bottom"
+      >
+        onboarding.import_organization.personal.page.header
+      </h1>
+    </header>
+    <AutoPersonalOrganizationBind
+      almApplication={
+        Object {
+          "backgroundColor": "blue",
+          "iconPath": "icon/path",
+          "installationUrl": "https://alm.installation.url",
+          "key": "github",
+          "name": "GitHub",
+        }
+      }
+      almInstallId="foo"
+      almOrganization={
+        Object {
+          "avatar": "my-avatar",
+          "key": "foo",
+          "name": "Foo",
+          "personal": true,
+        }
+      }
+      importPersonalOrg={
+        Object {
+          "actions": Object {
+            "admin": true,
+          },
+          "key": "foo",
+          "name": "Foo",
+        }
+      }
+      onOrgCreated={[Function]}
+      updateOrganization={[MockFunction]}
+      updateUrlQuery={[Function]}
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`should render with auto tab displayed 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="onboarding.create_organization.page.header"
+    titleTemplate="%s"
+  />
+  <div
+    className="sonarcloud page page-limited"
+  >
+    <header
+      className="page-header"
+    >
+      <h1
+        className="page-title big-spacer-bottom"
+      >
+        onboarding.create_organization.page.header
+      </h1>
+      <p
+        className="page-description"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.create_organization.page.description"
+          id="onboarding.create_organization.page.description"
+          values={
+            Object {
+              "break": <br />,
+              "more": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/documentation/sonarcloud-pricing/"
+              >
+                learn_more
+              </Link>,
+              "price": "billing.price_format.10",
+            }
+          }
+        />
+      </p>
+    </header>
+    <Tabs
+      onChange={[Function]}
+      selected="auto"
+      tabs={
+        Array [
+          Object {
+            "key": "auto",
+            "node": "onboarding.import_organization.github",
+          },
+          Object {
+            "key": "manual",
+            "node": "onboarding.create_organization.create_manually",
+          },
+        ]
+      }
+    />
+    <ManualOrganizationCreate
+      className="hidden"
+      createOrganization={[MockFunction]}
+      deleteOrganization={[MockFunction]}
+      onOrgCreated={[Function]}
+      subscriptionPlans={
+        Array [
+          Object {
+            "maxNcloc": 100000,
+            "price": 10,
+          },
+          Object {
+            "maxNcloc": 250000,
+            "price": 75,
+          },
+        ]
+      }
+    />
+    <AutoOrganizationCreate
+      almApplication={
+        Object {
+          "backgroundColor": "blue",
+          "iconPath": "icon/path",
+          "installationUrl": "https://alm.installation.url",
+          "key": "github",
+          "name": "GitHub",
+        }
+      }
+      almUnboundApplications={Array []}
+      className=""
+      createOrganization={[MockFunction]}
+      onOrgCreated={[Function]}
+      unboundOrganizations={
+        Array [
+          Object {
+            "actions": Object {
+              "admin": true,
+            },
+            "key": "foo",
+            "name": "Foo",
+          },
+        ]
+      }
+      updateUrlQuery={[Function]}
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`should render with auto tab selected and manual disabled 1`] = `
+<AlmApplicationInstalling
+  almKey="github"
+/>
+`;
+
+exports[`should render with auto tab selected and manual disabled 2`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="onboarding.create_organization.page.header"
+    titleTemplate="%s"
+  />
+  <div
+    className="sonarcloud page page-limited"
+  >
+    <header
+      className="page-header"
+    >
+      <h1
+        className="page-title big-spacer-bottom"
+      >
+        onboarding.create_organization.page.header
+      </h1>
+      <p
+        className="page-description"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.create_organization.page.description"
+          id="onboarding.create_organization.page.description"
+          values={
+            Object {
+              "break": <br />,
+              "more": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/documentation/sonarcloud-pricing/"
+              >
+                learn_more
+              </Link>,
+              "price": "billing.price_format.10",
+            }
+          }
+        />
+      </p>
+    </header>
+    <Tabs
+      onChange={[Function]}
+      selected="auto"
+      tabs={
+        Array [
+          Object {
+            "key": "auto",
+            "node": "onboarding.import_organization.github",
+          },
+          Object {
+            "key": "manual",
+            "node": "onboarding.create_organization.create_manually",
+          },
+        ]
+      }
+    />
+    <ManualOrganizationCreate
+      className="hidden"
+      createOrganization={[MockFunction]}
+      deleteOrganization={[MockFunction]}
+      onOrgCreated={[Function]}
+      subscriptionPlans={
+        Array [
+          Object {
+            "maxNcloc": 100000,
+            "price": 10,
+          },
+          Object {
+            "maxNcloc": 250000,
+            "price": 75,
+          },
+        ]
+      }
+    />
+    <AutoOrganizationCreate
+      almApplication={
+        Object {
+          "backgroundColor": "blue",
+          "iconPath": "icon/path",
+          "installationUrl": "https://alm.installation.url",
+          "key": "github",
+          "name": "GitHub",
+        }
+      }
+      almInstallId="foo"
+      almOrganization={
+        Object {
+          "avatar": "my-avatar",
+          "description": "Continuous Code Quality",
+          "key": "sonarsource",
+          "name": "SonarSource",
+          "personal": false,
+          "url": "https://www.sonarsource.com",
+        }
+      }
+      almUnboundApplications={Array []}
+      className=""
+      createOrganization={[MockFunction]}
+      onOrgCreated={[Function]}
+      unboundOrganizations={
+        Array [
+          Object {
+            "actions": Object {
+              "admin": true,
+            },
+            "key": "foo",
+            "name": "Foo",
+          },
+        ]
+      }
+      updateUrlQuery={[Function]}
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`should render with manual tab displayed 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="onboarding.create_organization.page.header"
+    titleTemplate="%s"
+  />
+  <div
+    className="sonarcloud page page-limited"
+  >
+    <header
+      className="page-header"
+    >
+      <h1
+        className="page-title big-spacer-bottom"
+      >
+        onboarding.create_organization.page.header
+      </h1>
+      <p
+        className="page-description"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.create_organization.page.description"
+          id="onboarding.create_organization.page.description"
+          values={
+            Object {
+              "break": <br />,
+              "more": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/documentation/sonarcloud-pricing/"
+              >
+                learn_more
+              </Link>,
+              "price": "billing.price_format.10",
+            }
+          }
+        />
+      </p>
+    </header>
+    <ManualOrganizationCreate
+      className=""
+      createOrganization={[MockFunction]}
+      deleteOrganization={[MockFunction]}
+      onOrgCreated={[Function]}
+      subscriptionPlans={
+        Array [
+          Object {
+            "maxNcloc": 100000,
+            "price": 10,
+          },
+          Object {
+            "maxNcloc": 250000,
+            "price": 75,
+          },
+        ]
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`should switch tabs 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="onboarding.create_organization.page.header"
+    titleTemplate="%s"
+  />
+  <div
+    className="sonarcloud page page-limited"
+  >
+    <header
+      className="page-header"
+    >
+      <h1
+        className="page-title big-spacer-bottom"
+      >
+        onboarding.create_organization.page.header
+      </h1>
+      <p
+        className="page-description"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.create_organization.page.description"
+          id="onboarding.create_organization.page.description"
+          values={
+            Object {
+              "break": <br />,
+              "more": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/documentation/sonarcloud-pricing/"
+              >
+                learn_more
+              </Link>,
+              "price": "billing.price_format.10",
+            }
+          }
+        />
+      </p>
+    </header>
+    <Tabs
+      onChange={[Function]}
+      selected="auto"
+      tabs={
+        Array [
+          Object {
+            "key": "auto",
+            "node": "onboarding.import_organization.github",
+          },
+          Object {
+            "key": "manual",
+            "node": "onboarding.create_organization.create_manually",
+          },
+        ]
+      }
+    />
+    <ManualOrganizationCreate
+      className="hidden"
+      createOrganization={[MockFunction]}
+      deleteOrganization={[MockFunction]}
+      onOrgCreated={[Function]}
+      subscriptionPlans={
+        Array [
+          Object {
+            "maxNcloc": 100000,
+            "price": 10,
+          },
+          Object {
+            "maxNcloc": 250000,
+            "price": 75,
+          },
+        ]
+      }
+    />
+    <AutoOrganizationCreate
+      almApplication={
+        Object {
+          "backgroundColor": "blue",
+          "iconPath": "icon/path",
+          "installationUrl": "https://alm.installation.url",
+          "key": "github",
+          "name": "GitHub",
+        }
+      }
+      almUnboundApplications={Array []}
+      className=""
+      createOrganization={[MockFunction]}
+      onOrgCreated={[Function]}
+      unboundOrganizations={
+        Array [
+          Object {
+            "actions": Object {
+              "admin": true,
+            },
+            "key": "foo",
+            "name": "Foo",
+          },
+        ]
+      }
+      updateUrlQuery={[Function]}
+    />
+  </div>
+</Fragment>
+`;

@@ -1,0 +1,48 @@
+{
+  "name": "sonar-docs",
+  "version": "0.0.0",
+  "license": "LGPL-3.0",
+  "private": true,
+  "dependencies": {
+    "@andrew-codes/gatsby-plugin-elasticlunr-search": "1.0.4",
+    "babel-polyfill": "6.26.0",
+    "fs-extra": "^5.0.0",
+    "gatsby": "^1.9.247",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-glamor": "^1.6.13",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-remark-custom-blocks": "^1.0.5",
+    "gatsby-source-filesystem": "^1.5.34",
+    "gatsby-transformer-remark": "^1.7.40",
+    "lodash": "4.17.10",
+    "lunr": "2.3.2",
+    "react-helmet": "^5.2.0",
+    "remark-include": "^2.0.0",
+    "serve": "^6.5.6",
+    "typography": "^0.16.16"
+  },
+  "scripts": {
+    "build": "yarn jest && gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "start": "serve public/",
+    "format": "prettier --write 'src/**/*.{md,js}'"
+  },
+  "devDependencies": {
+    "glob-promise": "3.4.0",
+    "jest": "23.6.0",
+    "prettier": "^1.12.0",
+    "remark": "9.0.0",
+    "unist-util-visit": "1.4.0"
+  },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "jest": {
+    "moduleFileExtensions": ["js"],
+    "testPathIgnorePatterns": ["<rootDir>/node_modules", "<rootDir>/.cache"],
+    "testRegex": "(/__tests__/.*|\\-test)\\.(ts|tsx|js)$"
+  }
+}

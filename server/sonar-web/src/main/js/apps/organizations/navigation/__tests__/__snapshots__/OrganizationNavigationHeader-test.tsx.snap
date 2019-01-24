@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<header
+  className="navbar-context-header"
+>
+  <OrganizationAvatar
+    organization={
+      Object {
+        "key": "foo",
+        "name": "Foo",
+        "projectVisibility": "public",
+      }
+    }
+  />
+  <span
+    className="spacer-left"
+  >
+    Foo
+  </span>
+</header>
+`;
+
+exports[`renders dropdown 1`] = `
+<Dropdown
+  className="display-inline-block"
+  overlay={
+    <ul
+      className="menu"
+    >
+      <OrganizationListItem
+        organization={
+          Object {
+            "actions": Object {
+              "admin": true,
+            },
+            "key": "org1",
+            "name": "org1",
+            "projectVisibility": "public",
+          }
+        }
+      />
+      <OrganizationListItem
+        organization={
+          Object {
+            "actions": Object {
+              "admin": false,
+            },
+            "key": "org2",
+            "name": "org2",
+            "projectVisibility": "public",
+          }
+        }
+      />
+    </ul>
+  }
+>
+  <a
+    className="display-inline-flex-center spacer-left link-base-color link-no-underline"
+    href="#"
+  >
+    Foo
+    <DropdownIcon
+      className="little-spacer-left"
+    />
+  </a>
+</Dropdown>
+`;
+
+exports[`renders with alm integration 1`] = `
+<header
+  className="navbar-context-header"
+>
+  <OrganizationAvatar
+    organization={
+      Object {
+        "alm": Object {
+          "key": "github",
+          "url": "https://github.com/foo",
+        },
+        "key": "foo",
+        "name": "Foo",
+        "projectVisibility": "public",
+      }
+    }
+  />
+  <span
+    className="spacer-left"
+  >
+    Foo
+  </span>
+  <a
+    className="link-no-underline"
+    href="https://github.com/foo"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img
+      alt="github"
+      className="text-text-top spacer-left"
+      height={16}
+      src="/images/sonarcloud/github.svg"
+      width={16}
+    />
+  </a>
+</header>
+`;
